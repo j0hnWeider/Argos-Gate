@@ -1,12 +1,31 @@
 #pragma once
 
-#ifdef PROCESSSCANNER_EXPORTS
-#define PROCESSSCANNER_API __declspec(dllexport)
-#else
-#define PROCESSSCANNER_API __declspec(dllimport)
-#endif
+#include <windows.h>
+#include <vector>
+#include <string>
 
-extern "C" {
-    // Função para iniciar a listagem de processos (exemplo)
-    PROCESSSCANNER_API void listar_processos();
+namespace ArgosGate
+{
+    // Estrutura que representa informações básicas de um processo
+    struct ProcessoInfo
+    {
+        DWORD pid;              // ID do processo
+        std::wstring nome;      // Nome do processo
+        std::wstring caminho;   // Caminho completo do executável
+    };
+
+    class ProcessScanner
+    {
+    public:
+        // Construtor e destrutor
+        ProcessScanner();
+        ~ProcessScanner();
+
+        // Função para listar todos os processos ativos no sistema
+        std::vector<ProcessoInfo> listarProcessos();
+
+    private:
+        // Função auxiliar para obter o caminho completo do executável dado o PID
+        std::wstring obterCaminhoProcesso(DWORD pid);
+    };
 }
