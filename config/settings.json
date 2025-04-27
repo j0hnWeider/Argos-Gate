@@ -1,0 +1,17 @@
+{
+  "logLevel": "info",
+  "alertThreshold": "medium",
+  "logFormat": "json",
+  "encryption": {
+    "enabled": true,
+    "algorithm": "AES-256"
+  },
+  "scanIntervalSeconds": 60,
+  "processWhitelist": [],
+  "author": {
+    "name": "John Weider",
+    "codename": "Zeus",
+    "discord": "dev.zeus",
+    "linkedin": "https://www.linkedin.com/in/john-weider-98bb041b2/"
+  }
+}

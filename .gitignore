@@ -1,0 +1,54 @@
+# Ignorar arquivos temporários do Windows
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+
+# Arquivos de build
+build/
+bin/
+obj/
+
+# Arquivos temporários do Visual Studio
+*.user
+*.suo
+*.userosscache
+*.sln.docstates
+
+# Arquivos de log
+*.log
+
+# Arquivos Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+env/
+venv/
+
+# Arquivos C#
+*.exe
+*.dll
+*.pdb
+
+# Arquivos C++
+*.obj
+*.o
+*.exe
+*.dll
+*.pdb
+*.ilk
+*.idb
+*.ipdb
+*.iobj
+*.ipdb
+*.log
+*.sdf
+*.cache
+*.ilk
+*.suo
+*.user
+*.aps
+*.ncb
+*.opensdf
+*.tlog
+*.lastbuildstate
